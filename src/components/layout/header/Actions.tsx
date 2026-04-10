@@ -1,35 +1,74 @@
-// components/layout/header/Actions.tsx
 "use client";
 
 import Link from "next/link";
-import { ShoppingCart, User } from "lucide-react";
+import {
+  ShoppingCart,
+  User,
+  CreditCardIcon,
+  LogOutIcon,
+  SettingsIcon,
+  UserIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface ActionsProps {
-  role?: "public" | "admin";
+  role?: "public" | "user" | "admin";
 }
 
 export function Actions({ role = "public" }: ActionsProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center">
       <ThemeToggle />
 
-      <Button variant="ghost" size="icon" className="relative">
-        <ShoppingCart className="h-5 w-5" />
-      </Button>
+      <Link href="/giohang">
+        <Button variant="ghost" size="icon" className="relative">
+          <ShoppingCart className="h-5 w-5" />
+        </Button>
+      </Link>
 
       {role === "public" ? (
         <Link href="/login">
-          <Button variant="default" size="sm">
-            <User className="h-4 w-4 mr-2" />
-            Đăng nhập
-          </Button>
+          <Button variant="default">Đăng nhập</Button>
         </Link>
       ) : (
-        <Button variant="ghost" size="icon">
-          <User className="h-5 w-5" />
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <User />
+              Long
+            </Button>
+          </DropdownMenuTrigger>
+
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem>
+              <UserIcon />
+              Hồ sơ
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <CreditCardIcon />
+              Thanh toán
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <SettingsIcon />
+              Cài đặt
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuItem variant="destructive">
+              <LogOutIcon />
+              Đăng xuất
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       )}
     </div>
   );

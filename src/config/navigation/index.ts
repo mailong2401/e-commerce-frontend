@@ -12,7 +12,7 @@ export interface NavItem {
 }
 
 // Sửa hàm getNavItems để hỗ trợ đúng type
-export const getNavItems = (role: "public" | "admin"): NavItem[] => {
+export const getNavItems = (role: "public" | "admin" | 'user'): NavItem[] => {
   switch (role) {
     case "admin":
       return adminNavItems;

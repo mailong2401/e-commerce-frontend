@@ -24,7 +24,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header role="public" />
+          <Header role="user" />
 
           <main className="flex-1">
             <div className="container mx-auto px-4 py-6">
