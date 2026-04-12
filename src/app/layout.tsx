@@ -4,6 +4,14 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Roboto } from "next/font/google"
+
+const roboto = Roboto({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+});
+
 
 export const metadata: Metadata = {
   title: "E-Commerce",

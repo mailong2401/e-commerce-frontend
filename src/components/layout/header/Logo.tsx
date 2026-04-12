@@ -4,9 +4,9 @@ import Link from "next/link";
 export function Logo() {
   return (
     <Link href="/" className="flex items-center space-x-2">
-      <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-        E-Commerce
-      </span>
+      <h1 className="text-xl font-bold  from-primary to-primary/60  ">
+        TriLong Official
+      </h1>
     </Link>
   );
 }

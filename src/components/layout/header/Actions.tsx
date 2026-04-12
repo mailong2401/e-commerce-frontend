@@ -18,6 +18,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 
 interface ActionsProps {
   role?: "public" | "user" | "admin";
@@ -26,6 +27,7 @@ interface ActionsProps {
 export function Actions({ role = "public" }: ActionsProps) {
   return (
     <div className="flex items-center">
+      <Input type="search" placeholder="Tìm kiếm..." />
       <ThemeToggle />
 
       <Link href="/giohang">

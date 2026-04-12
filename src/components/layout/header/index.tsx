@@ -1,6 +1,4 @@
 // components/layout/header/index.tsx
-"use client";
-
 import { getNavItems } from "@/config/navigation/index";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
@@ -14,7 +12,7 @@ export default function Header({ role = "public" }: HeaderProps) {
   const navItems = getNavItems(role);
 
   return (
-    <div className="container mx-auto flex h-16 items-center justify-between ">
+    <div className="container mx-auto flex items-center justify-between py-6">
       {/* Left  */}
       <Logo />
 
