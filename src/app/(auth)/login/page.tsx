@@ -1,12 +1,10 @@
-import LoginForm from "@/components/auth/login/LoginForm"
-import { Button } from "@/components/ui/button"
-import { ChevronLeftIcon } from "lucide-react"
-import Link from "next/link"
+import LoginForm from '@/components/auth/login/LoginForm'
+import { ChevronLeftIcon } from 'lucide-react'
+import Link from 'next/link'
 
 export default function LoginPage() {
   return (
     <div className="flex h-screen">
-
       <div className="relative flex flex-col w-1/3 justify-center items-center bg-background/60 backdrop-blur-xl">
         <Link
           href="/"
@@ -17,9 +15,7 @@ export default function LoginPage() {
 
         <LoginForm />
       </div>
-
       <div className="w-2/3 bg-foreground/90 "></div>
-
     </div>
   )
 }

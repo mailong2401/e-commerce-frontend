@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button"
 import { Field, FieldGroup } from "@/components/ui/field"
 import PasswordInput from "./PasswordInput"
 import UsernameInput from "./UsernameInput"
+import { useRouter } from "next/navigation"
 import SocialLogin from "./SocialLogin"
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false)
+  const router = useRouter()
 
   return (
     <div className="w-full max-w-sm">
@@ -40,7 +42,7 @@ export default function LoginForm() {
           <Button type="submit" className="w-1/2">
             Đăng nhập
           </Button>
-          <Button variant="outline" className="w-1/2">
+          <Button variant="outline" className="w-1/2" onClick={() => router.push('/sign-up')}>
             Tạo tài khoản
           </Button>
         </Field>
