@@ -4,13 +4,16 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Roboto } from "next/font/google"
+import { Roboto, Playwrite_VN } from "next/font/google"
 
 const roboto = Roboto({
   subsets: ["latin", "vietnamese"],
   weight: ["400", "500", "700"],
   variable: "--font-roboto",
 });
+const playwrite = Playwrite_VN({
+
+})
 
 
 export const metadata: Metadata = {
@@ -32,15 +35,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header role="user" />
-
-          <main className="flex-1">
-            <div className="container mx-auto px-4 py-6">
-              {children}
-            </div>
-          </main>
-
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>

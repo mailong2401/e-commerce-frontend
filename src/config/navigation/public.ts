@@ -2,7 +2,7 @@
 import { NavItem } from "./index";
 
 export const publicNavItems: NavItem[] = [
-  { label: "Trang chủ", href: "/" },
+  { label: "Trang chủ", href: "/home" },
   {
     label: "Danh mục",
     children: [
