@@ -44,7 +44,7 @@ export default function RegisterForm() {
             variant="outline"
             className="w-1/2"
           >
-            Đăng ký
+            <Link href="/sign-up/otp-verification">Đăng ký</Link>
           </Button>
           <Button
             type="button"

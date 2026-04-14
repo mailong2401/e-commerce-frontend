@@ -1,5 +1,7 @@
+import HeroSection from '@/components/auth/HeroSection'
 import LoginForm from '@/components/auth/login/LoginForm'
 import { ChevronLeftIcon } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function LoginPage() {
@@ -15,7 +17,8 @@ export default function LoginPage() {
 
         <LoginForm />
       </div>
-      <div className="w-2/3 bg-foreground/90 "></div>
+      <HeroSection />
+
     </div>
   )
 }

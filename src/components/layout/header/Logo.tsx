@@ -1,12 +1,51 @@
 // components/layout/header/Logo.tsx
-import Link from "next/link";
+"use client";
+
+import * as React from "react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function Logo() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    return (
+      <div className='flex  gap-3 items-center '>
+        <div className='  p-2 '>
+          <Image
+            src="/images/logo/logo_dark.png"
+            alt="LongTri Official"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
+        </div>
+        <div>
+          <h1 className='text-foreground font-bold text-2xl tracking-tight'>LongTri Official</h1>
+          <p className='text-foreground/70 text-xs'>Mua sắm cao cấp</p>
+        </div>
+      </div>
+    );
+  }
   return (
-    <Link href="/" className="flex items-center space-x-2">
-      <h1 className="text-xl font-bold  from-primary to-primary/60  ">
-        TriLong Official
-      </h1>
-    </Link>
+    <div className='flex  gap-3 items-center '>
+      <div className='  p-2 '>
+        <Image
+          src={theme === "light" ? "/images/logo/logo.png" : "/images/logo/logo_dark.png"}
+          alt="LongTri Official"
+          width={40}
+          height={40}
+          className="w-10 h-10 object-contain"
+        />
+      </div>
+      <div>
+        <h1 className='text-foreground font-bold text-2xl tracking-tight'>LongTri Official</h1>
+        <p className='text-foreground/70 text-xs'>Mua sắm cao cấp</p>
+      </div>
+    </div>
   );
 }

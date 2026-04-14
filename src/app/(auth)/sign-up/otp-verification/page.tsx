@@ -1,5 +1,5 @@
-import HeroSection from "@/components/auth/HeroSection"
-import RegisterForm from "@/components/auth/sign-up/SignUpForm"
+import HeroSection from '@/components/auth/HeroSection'
+import OtpForm from '@/components/auth/sign-up/opt-verification/OtpForm'
 import { ChevronLeftIcon } from 'lucide-react'
 import Link from "next/link"
 export default function SignUpPage() {
@@ -14,7 +14,7 @@ export default function SignUpPage() {
         <ChevronLeftIcon className="w-5 h-5" />
       </Link>
 
-      <RegisterForm />
+      <OtpForm />
     </div>
   </div>
 }
