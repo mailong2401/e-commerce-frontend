@@ -1,3 +1,4 @@
+//src/app/(auth)/sign-up/page.tsx
 import HeroSection from "@/components/auth/HeroSection"
 import RegisterForm from "@/components/auth/sign-up/SignUpForm"
 import { ChevronLeftIcon } from 'lucide-react'

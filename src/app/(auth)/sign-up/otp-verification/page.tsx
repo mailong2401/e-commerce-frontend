@@ -1,3 +1,4 @@
+//src/app/(auth)/sign-up/opt-verification/page.tsx
 import HeroSection from '@/components/auth/HeroSection'
 import OtpForm from '@/components/auth/sign-up/opt-verification/OtpForm'
 import { ChevronLeftIcon } from 'lucide-react'

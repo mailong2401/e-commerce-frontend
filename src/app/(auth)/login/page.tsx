@@ -1,7 +1,7 @@
 import HeroSection from '@/components/auth/HeroSection'
 import LoginForm from '@/components/auth/login/LoginForm'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { ChevronLeftIcon } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function LoginPage() {
@@ -14,6 +14,9 @@ export default function LoginPage() {
         >
           <ChevronLeftIcon className="w-5 h-5" />
         </Link>
+        <div className='absolute top-8 right-8'>
+          <ThemeToggle />
+        </div>
 
         <LoginForm />
       </div>
