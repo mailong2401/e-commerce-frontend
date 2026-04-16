@@ -76,8 +76,6 @@ export function InputOTPForm() {
         value
       )
 
-      console.log("User:", res.data) // axios -> data nằm ở đây
-
       alert("Đăng ký thành công")
       router.push("/login")
 

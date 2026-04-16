@@ -310,7 +310,7 @@ export default function RegisterForm() {
             Đăng ký
           </Button>
 
-          <Button type="button" className="w-1/2" asChild>
+          <Button type="button" className="w-1/2" variant="outline" asChild>
             <Link href="/login">Đã có tài khoản</Link>
           </Button>
         </Field>
